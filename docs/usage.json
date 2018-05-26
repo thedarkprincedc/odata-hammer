@@ -1,0 +1,7 @@
+{
+    "commande": "(command) <(parameters)>",
+    "com" : "($s) $s",
+    "command": "\txodatascan http://services.odata.org/V2/Northwind/Northwind.svc/",
+    "example": "\txodatascan <serviceurl>",
+    "instructions": "\nIn order to use the xodatascan tool you need to run the following command\n"
+}

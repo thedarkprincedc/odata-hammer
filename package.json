@@ -1,0 +1,23 @@
+{
+  "name": "xodata-data-metadata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "oservicedump": "./bin/odata-service-downloader.js"
+  },
+  "preferGlobal": true,
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "flat": "^4.0.0",
+    "http": "0.0.0",
+    "xml2js": "^0.4.19",
+    "excel-as-json": "^2.0.2",
+    "odata-v4-service-metadata": "^0.1.6",
+    "xml-formatter": "^1.0.1"
+  }
+}
