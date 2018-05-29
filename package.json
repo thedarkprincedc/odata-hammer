@@ -13,11 +13,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "commander": "^2.15.1",
+    "excel-as-json": "^2.0.2",
     "flat": "^4.0.0",
     "http": "0.0.0",
-    "xml2js": "^0.4.19",
-    "excel-as-json": "^2.0.2",
+    "inquirer": "^5.2.0",
     "odata-v4-service-metadata": "^0.1.6",
-    "xml-formatter": "^1.0.1"
+    "xml-formatter": "^1.0.1",
+    "xml2js": "^0.4.19"
   }
 }

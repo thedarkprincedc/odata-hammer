@@ -1,17 +1,34 @@
 #!/usr/bin/env node
 
-// var importa = require('../lib/import.js');
+// 
+var program = require('commander');
+var inquirer = require('inquirer');
+var importa = require('../lib/import.js');
 var exporta = require('../lib/export.js');
 
-// var arguments = process.argv.slice(2);
+program
+    .command('import <ODataServiceUri>')
+    .alias('i')
+    .description('Import Metadata and Data from Service Url') 
+    .option('-d, --dest [destinationPath]', "Destination Path", "./")
+    .action(importServiceUri);
+program   
+    .command('generate <ExcelSpreadsheetFilename>')
+    .alias('g')
+    .description('Generate Metadata and Data from Excel Spreadsheet') 
+    .option('-d, --dest [destinationPath]', "Destination Path", "./odataservice-dump")
+    .action(generateMetadataFromExcel);
+ program.parse(process.argv);
 
-// if(arguments.length > 0){
-//   importa.parseArguments(function(arg){
-//     importa.downloadDataFromODataServiceUrl(arg.serviceUrl);
-//   });
-// }
-// else{
-//   importa.displayCommands();
-// }
-
-exporta.generateMetadata();
+function importServiceUri(endpointUrl, args){
+    console.log("Import");
+    console.log(endpointUrl);
+    console.log(args.dest);
+    importa.downloadDataFromODataServiceUrl(endpointUrl, args.dest);
+}
+function generateMetadataFromExcel(excelFilename, args){
+    console.log("Generate");
+    console.log(excelFilename);
+    console.log(args.dest);
+    exporta.generateMetadata();
+}
