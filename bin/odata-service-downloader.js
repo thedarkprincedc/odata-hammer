@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 
 // 
+var wizard = require("../lib/command-line/wizard")
 var program = require('commander');
-var inquirer = require('inquirer');
 var importa = require('../lib/import.js');
 var exporta = require('../lib/export.js');
 
+program.
+    version('0.1.0');
 program
     .command('import <ODataServiceUri>')
     .alias('i')
@@ -18,7 +20,8 @@ program
     .description('Generate Metadata and Data from Excel Spreadsheet') 
     .option('-d, --dest [destinationPath]', "Destination Path", "./odataservice-dump")
     .action(generateMetadataFromExcel);
- program.parse(process.argv);
+program.parse(process.argv);
+wizard.run();
 
 function importServiceUri(endpointUrl, args){
     console.log("Import");
@@ -32,3 +35,4 @@ function generateMetadataFromExcel(excelFilename, args){
     console.log(args.dest);
     exporta.generateMetadata();
 }
+
