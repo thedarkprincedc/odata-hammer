@@ -7,3 +7,20 @@ OData Hammer is app designed to provide the following feature to users:
 
 Download from NPM
 - Install - npm install -g odata-hammer
+
+Commands
+
+- Import - Imports metadata and data file from service url
+    - odata-hammer import <serviceurl> <destination:optional>
+    - odata-hammer i <serviceurl> <destination:optional>
+
+- Generate - Converts Excel file to json file and generate a metadata file
+    - odata-hammer generate <filename.xlsx> <destination:optional>
+    - odata-hammer g <filename.xlsx> <destination:optional>
+
+- Excel to JSON - Converts Excel file to json file
+    - odata-hammer xltojson <filename.xlsx> <destination:optional>
+    - odata-hammer x <filename.xlsx> <destination:optional>
+    
+- Wizard 
+    - odata-hammer -w
