@@ -1,5 +1,5 @@
 {
-  "name": "xodata-data-metadata",
+  "name": "odata-hammer",
   "version": "1.0.0",
   "description": "",
   "main": "./lib/index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "oservicedump": "./bin/odata-service-downloader.js"
+    "oservicedump": "./bin/app.js"
   },
   "preferGlobal": true,
   "author": "",
