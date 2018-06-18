@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-// var wizard = require("../lib/command-line/wizard")
 var program = require('commander');
 var service = require('../lib/service.js');
 var fs = require('fs');
@@ -43,6 +42,12 @@ program
             console.log("\n\tExported %s to %s successfully\n", filename, destfilename);
         });
     });
+program   
+    .command('wizard')
+    .alias('w')
+    .description('This command starts a wizard designed to help the user\n') 
+    .option('-d, --dest [destinationPath]', "Destination Path", "./")
+    .action((filename, args) => {
+        service.wizard();
+    }); 
 program.parse(process.argv);
-
-//wizard.run();
