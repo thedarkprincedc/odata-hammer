@@ -21,6 +21,6 @@ Commands
 - Excel to JSON - Converts Excel file to json file
     - odata-hammer xltojson <filename.xlsx> <destination:optional>
     - odata-hammer x <filename.xlsx> <destination:optional>
-    
-- Wizard 
+
+- Wizard - Runs the wizard cli tool
     - odata-hammer -w
