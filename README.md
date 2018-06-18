@@ -6,4 +6,4 @@ OData Hammer is app designed to provide the following feature to users:
 - Convert a Excel file to a ODATA collection JSON file
 
 Download from NPM
-npm install -g odata-hammer
+- Install - npm install -g odata-hammer
